@@ -14,3 +14,16 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+Imports: 
+    shiny,
+    shinydashboard,
+    tidycovid19,
+    ggplot2,
+    plotly,
+    leaflet,
+    sf,
+    maps,
+    DT,
+    rgdal
+Depends: 
+    tidyverse

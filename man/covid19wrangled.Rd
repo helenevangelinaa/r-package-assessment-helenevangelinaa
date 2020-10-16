@@ -8,7 +8,7 @@
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 48861 rows and 7 columns.
 }
 \source{
-The data below comes from tidycovid19 package created by Joachim Gassen, which was originally collected and cleaned by Johns Hopkins University.
+The data below comes from \code{tidycovid19} package created by Joachim Gassen, which was originally collected and cleaned by Johns Hopkins University.
 }
 \usage{
 covid19wrangled

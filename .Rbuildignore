@@ -3,3 +3,5 @@
 ^.*\.Rproj$
 ^app\.R$
 ^data-raw$
+^yourPkg\.Rproj$
+^LICENSE\.md$

@@ -1,10 +1,21 @@
-myApp <- function(...) {
+library(shinydashboard)
+library(shiny)
+library(tidyverse)
+library(tidycovid19)
+library(ggplot2)
+library(plotly)
+library(leaflet)
+library(sf)
+library(maps)
+library(DT)
+library(rgdal)
+
 options(scipen = 999)
   
 #map data
 world <- st_as_sf(map("world", plot = FALSE, fill = TRUE))
-worldtbl <- as.tibble(world)
-worldshp <- readOGR(dsn = file.path(paste(getwd(),"/data", sep=""), "TM_WORLD_BORDERS_SIMPL-0.3.shp") , stringsAsFactors = F)
+worldtbl <- as_tibble(world)
+worldshp <- readOGR(dsn = file.path(paste(getwd(),"/inst/extdata", sep=""), "TM_WORLD_BORDERS_SIMPL-0.3.shp") , stringsAsFactors = F)
 
 worldshp@data$POP2005[ which(worldshp@data$POP2005 == 0)] = NA
 worldshp@data$POP2005 <- as.numeric(as.character(worldshp@data$POP2005)) / 1000000 %>% round(2)
@@ -671,6 +682,4 @@ server <- function(input, output, session) {
   })
 }
 
-shinyApp(ui, server, ...)
-
-}
+shinyApp(ui, server)

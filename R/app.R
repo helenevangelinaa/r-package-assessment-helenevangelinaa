@@ -1,25 +1,6 @@
 myApp <- function(...) {
 options(scipen = 999)
-
-#COVID-19 data
-covid19 <- download_merged_data(cached = TRUE, silent = TRUE)
-
-
-countries <- read.csv(here::here("data/countries.csv"))
-
-covid19wrangled <- covid19 %>%
-  select(country,
-         date, confirmed, deaths, recovered, region, population) %>%
-  na.omit()
-
-covid19total <- covid19wrangled %>%
-  filter(date == max(date)) %>%
-  select(country, confirmed, deaths, recovered, region, population) %>%
-  left_join(countries,
-            by = c("country" = "name")) %>%
-  select(-country.y) %>%
-  mutate(caseper10000 = confirmed/population*10000)
-
+  
 #map data
 world <- st_as_sf(map("world", plot = FALSE, fill = TRUE))
 worldtbl <- as.tibble(world)

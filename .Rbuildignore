@@ -2,3 +2,4 @@
 ^\.github$
 ^.*\.Rproj$
 ^app\.R$
+^data-raw$

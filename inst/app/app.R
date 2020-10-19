@@ -16,7 +16,6 @@ options(scipen = 999)
 #map data
 world <- st_as_sf(map("world", plot = FALSE, fill = TRUE))
 worldtbl <- as_tibble(world)
-worldshp <- readOGR(dsn = file.path(paste(getwd(),"/extdata", sep=""), "TM_WORLD_BORDERS_SIMPL-0.3.shp") , stringsAsFactors = F)
 
 #ui
 header <- dashboardHeader(title = "COVID-19 Overview")
@@ -51,9 +50,7 @@ body <- dashboardBody(
                         tabPanel("Figures",
                                  fluidRow(
                                    column(3,
-                                          selectInput("region2", "Which region do you want to view?",
-                                                      choices = c("All", "East Asia & Pacific", "Europe & Central Asia", "Latin America & Caribbean ", "Middle East & North Africa", "North America", "South Asia", "Sub-Saharan Africa "),
-                                                      selected = "All"),
+                                          selectInput01("regions", covid19total$region),
                                           "Show visualisation of cases:",
                                           actionButton("button", "By Region"),
                                           actionButton("button2", "By Country")
@@ -63,17 +60,7 @@ body <- dashboardBody(
                                  ),
                                  fluidRow(
                                    column(3,
-                                          selectInput("country", "Which country?", choices = c("All", "Afghanistan", "Angola","Albania", "Andorra", "United Arab Emirates", "Argentina", "Armenia", "Antigua & Barbuda", "Australia",
-                                                                                               "Austria", "Azerbaijan", "Burundi", "Belgium", "Benin", "Burkina Faso", "Bangladesh", "Bulgaria", "Bahrain", "Bahamas", "Bosnia & Herzegovina", "Belarus", "Belize", "Bolivia", "Brazil", 
-                                                                                               "Barbados", "Brunei", "Bhutan", "Botswana", "Central African Republic", "Canada", "Switzerland", "Chile", "China", "Cameroon", "Congo", "Columbia", 
-                                                                                               "Comoros", "Cape Verde", "Costa Rica", "Cuba", "Cyprus", "Czechia", "Germany", "Djibouti", "Dominica", "Denmark", "Dominican Republic", "Algeria", "Ecuador", "Egypt", "Eritrea", "Spain", "Estonia", "Ethiopia", "Finland",
-                                                                                               "Fiji", "France", "Gabon", "United Kingdom", "Georgia", "Ghana", "Guinea", "Gambia", "Guinea-Bissau", "Equatorial Guinea", "Greece", "Grenada", "Guatemala", "Guyana", "Honduras", "Croatia", "Haiti", "Hungary",
-                                                                                               "Indonesia", "India", "Ireland", "Iran", "Iraq", "Israel", "Iceland", "Italy", "Jamaica", "Jordan", "Japan", "Kazakhstan", "Kenya", "Kyrgyzstan", "Cambodia", "St. Kitts & Nevis", "South Korea", "Kuwait", "Laos",
-                                                                                               "Lebanon", "Liberia", "Libya", "St. Lucia", "Liechtenstein", "Sri Lanka", "Lesotho", "Lithuania", "Luxembourg", "Latvia", "Morocco", "Monaco", "Moldova", "Madagascar", "Maldives", "Mexico", "North Macedonia", "Mali",
-                                                                                               "Malta", "Myanmar", "Montenegro", "Mongolia", "Mozambique", "Mauritania", "Mauritius", "Malawi", "Malaysia", "Namibia", "Niger", "Nicaragua", "Netherlands", "Norway", "Nepal", "New Zealand", "Oman", "Pakistan", 
-                                                                                               "Panama", "Peru", "Philippines", "Papua New Guinea", "Poland", "Portugal", "Paraguay", "Palestinian Territories", "Qatar", "Romania", "Russia", "Rwanda", "Saudi Arabia", "Sudan", "Senegal", "Singapore", "Sierra Leone", 
-                                                                                               "El Salvador", "San Marino", "Somalia", "Serbia", "South Sudan", "São Tomé & Príncipe", "Suriname", "Slovakia", "Sweden", "Eswatini", "Seychelles", "Syria", "Chad", "Togo", "Thailand", "Tajikistan", "Timor-Leste", "Trinidad & Tobago",
-                                                                                               "Tunisia", "Turkey", "Tanzania", "Uganda", "Ukraine", "Uruguay", "United States", "Uzbekistan", "Venezuela", "Vietnam", "Yemen", "South Africa", "Zambia", "Zimbabwe")),
+                                          selectInput01("country", covid19total$country),
                                           plotlyOutput("map2")),
                                    column(9,
                                           tabsetPanel(type = "tabs",
@@ -231,9 +218,9 @@ server <- function(input, output, session) {
   filterdataall <- reactive({
     region <- covid19wrangled
     
-    if(input$region2 != 'All')
+    if(input$regions != 'All')
       region <- covid19wrangled %>%
-        filter(region == input$region2)
+        filter(region == input$regions)
     
     region
   })

@@ -9,9 +9,18 @@ library(sf)
 library(maps)
 library(DT)
 library(rgdal)
+library(covid19shiny)
 
 options(scipen = 999)
   
+covid19total <- covid19wrangled %>%
+  filter(date == max(date)) %>%
+  select(country, confirmed, deaths, recovered, region, population) %>%
+  left_join(countries,
+            by = c("country" = "name")) %>%
+  select(-country.y) %>%
+  mutate(caseper10000 = confirmed/population*10000)
+
 #map data
 world <- st_as_sf(map("world", plot = FALSE, fill = TRUE))
 worldtbl <- as_tibble(world)
@@ -39,9 +48,7 @@ body <- dashboardBody(
                                  
                                  fluidRow(
                                    column(3,
-                                          selectInput("region", "Which region do you want to view?",
-                                                      choices = c("All", "East Asia & Pacific", "Europe & Central Asia", "Latin America & Caribbean ", "Middle East & North Africa", "North America", "South Asia", "Sub-Saharan Africa "),
-                                                      selected = "All"),
+                                        selectInput("region", "which region?", choices = c("All", covid19wrangled$region), selected = "All"),
                                           sliderInput("plotcase", "Hide countries with cases more than:",
                                                       min = 0, max = 8000000, value = 8000000)),
                                    column(9,
@@ -681,5 +688,7 @@ server <- function(input, output, session) {
                 ))
   })
 }
+
+
 
 shinyApp(ui, server)

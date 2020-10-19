@@ -56,7 +56,7 @@ body <- dashboardBody(
                                  
                                  fluidRow(
                                    column(3,
-                                          covid19shiny::selectInput01("region", covid19total$region),
+                                          #covid19shiny::selectInput01("region", covid19total$region),
                                           sliderInput("plotcase", "Hide countries with cases more than:",
                                                       min = 0, max = 8000000, value = 8000000)),
                                    column(9,

@@ -23,7 +23,8 @@ Imports:
     sf,
     maps,
     DT,
-    rgdal
+    rgdal,
+    here
 Depends: 
     tidyverse,
     R (>= 2.10)

@@ -1,12 +1,18 @@
-#' Covid-19 plot function
+#' COVID-19 plot function
 #' 
-#' @description Creates daily COVID-19 plot based on the input
+#' @description This function creates daily COVID-19 plot based on the input
 #'
-#' @param a
+#' @param input_function The input function referring to the selectInput (example: input$country)
+#' @param input_name The name of the input wanting to be produced on the plot (confirmed cases, death, recovered)
+#' @param variable_name The name of the variable wanting to be plotted on the y-axis (daily_death, daily_confirmed, daily_recovered)
 #' 
-#' @return A daily covid-19 plot of daily cases, deaths or recovered based on the input
+#' @return A daily COVID-19 plot of daily cases, deaths or recovered based on the input
 #' 
-#'
+#' @importFrom magrittr %>%
+#' 
+#' @example 
+#'  dailyplot(input$country, "confirmed cases", "daily_confirmed")
+#' 
 #' @export
 dailyplot <- function(input_function, input_name, variable_name){
   

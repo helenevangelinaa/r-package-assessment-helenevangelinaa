@@ -25,7 +25,7 @@ Imports:
     DT,
     rgdal,
     here,
-    dplyr
+    dplyr,
+    magrittr
 Depends: 
-    tidyverse,
     R (>= 2.10)

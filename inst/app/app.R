@@ -1,6 +1,5 @@
 library(shinydashboard)
 library(shiny)
-library(tidyverse)
 library(tidycovid19)
 library(ggplot2)
 library(plotly)
@@ -8,8 +7,14 @@ library(leaflet)
 library(sf)
 library(maps)
 library(DT)
+library(dplyr)
 library(rgdal)
 library(here)
+
+globalVariables(names("covid19shiny"))
+utils::globalVariables(c("covid19wrangled", "confirmed", "deaths", "recovered", "lag", "totalconfirmed", "confirmed_lag",
+                         "totaldeaths", "death_lag", "totalrecovered", "recovered_lag", "aes_string", "element_rect", "element_blank", "element_text",
+                         "element_line", "country", "selectInput"))
 
 options(scipen = 999)
 

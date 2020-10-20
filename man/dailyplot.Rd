@@ -2,16 +2,20 @@
 % Please edit documentation in R/dailyplot.R
 \name{dailyplot}
 \alias{dailyplot}
-\title{Covid-19 plot function}
+\title{COVID-19 plot function}
 \usage{
 dailyplot(input_function, input_name, variable_name)
 }
 \arguments{
-\item{a}{}
+\item{input_function}{The input function referring to the selectInput (example: input$country)}
+
+\item{input_name}{The name of the input wanting to be produced on the plot (confirmed cases, death, recovered)}
+
+\item{variable_name}{The name of the variable wanting to be plotted on the y-axis (daily_death, daily_confirmed, daily_recovered)}
 }
 \value{
-A daily covid-19 plot of daily cases, deaths or recovered based on the input
+A daily COVID-19 plot of daily cases, deaths or recovered based on the input
 }
 \description{
-Creates daily COVID-19 plot based on the input
+This function creates daily COVID-19 plot based on the input
 }

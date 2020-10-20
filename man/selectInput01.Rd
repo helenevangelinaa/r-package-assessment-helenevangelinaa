@@ -2,13 +2,18 @@
 % Please edit documentation in R/selectInput01.R
 \name{selectInput01}
 \alias{selectInput01}
-\title{SelectInput for the shiny app}
+\title{SelectInput for the shiny Application}
 \usage{
 selectInput01(id, choices)
 }
 \arguments{
-\item{A}{function to add selectInput on the shiny app}
+\item{id}{The id of the selectInput, referring to the variable wanting to be included in the selectInput}
+
+\item{choices}{The column with values wished to be presented on the selectInput}
+}
+\value{
+SelectInput with the specified id and choices
 }
 \description{
-SelectInput for the shiny app
+This function creates selectInput for the Shiny app based on the input
 }

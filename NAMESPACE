@@ -3,3 +3,4 @@
 export(dailyplot)
 export(launch_app)
 export(selectInput01)
+importFrom(magrittr,"%>%")

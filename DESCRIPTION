@@ -24,7 +24,8 @@ Imports:
     maps,
     DT,
     rgdal,
-    here
+    here,
+    dplyr
 Depends: 
     tidyverse,
     R (>= 2.10)

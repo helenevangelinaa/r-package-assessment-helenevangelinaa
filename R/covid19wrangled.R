@@ -1,4 +1,4 @@
-#' covid19wrangled
+#' covid19wrangled dataset
 #'
 #' This data set contains 
 #' 

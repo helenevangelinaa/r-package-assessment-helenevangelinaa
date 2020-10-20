@@ -1,4 +1,4 @@
-#' covid19total
+#' covid19total dataset
 #'
 #' This data set contains the total cases, deaths, recovered by country of COVID-19
 #' 

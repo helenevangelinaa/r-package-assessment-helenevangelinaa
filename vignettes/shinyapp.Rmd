@@ -1,0 +1,42 @@
+---
+title: "COVID-19 Overview Shinydashboard"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{COVID-19 Overview Shinydashboard}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(covid19shiny)
+```
+
+This vignette is intended for the usage of `covid19shiny` package. It explains how to run the shiny application which illustrates the overview of COVID-19 state in the world and describes the functions contained inside the package. 
+
+The package uses data sourced from `tidycovid19` package by Joachim Gassen by using the `download_merged_data` function. Alongside with that, `countries.csv` file taken from Google Developers and Shapefile taken from thematicmapping.org are used. 
+
+Functions inside the package include:
+
+## Installing the package
+Before using the package, it must firstly be installed from [GitHub](https://github.com/etc5523-2020/r-package-assessment-helenevangelinaa).
+
+```{r installing-pkg, eval=FALSE}
+# install.packages("devtools")
+devtools::install_github("etc5523-2020/r-package-assessment-helenevangelinaa")
+```
+
+## Running the application
+
+After loading `library(covid19shiny)`, the shiny application could be launched by using the following code:
+```{r launching-app, eval = FALSE}
+launch_app()
+```
+
+## Example

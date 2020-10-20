@@ -3,7 +3,7 @@
 \docType{data}
 \name{covid19wrangled}
 \alias{covid19wrangled}
-\title{covid19wrangled}
+\title{covid19wrangled dataset}
 \format{
 a dataset with
 \itemize{

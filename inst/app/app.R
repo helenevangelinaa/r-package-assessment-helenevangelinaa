@@ -10,6 +10,8 @@ library(DT)
 library(dplyr)
 library(rgdal)
 library(here)
+library(qpdf)
+
 
 globalVariables(names("covid19shiny"))
 utils::globalVariables(c("covid19wrangled", "confirmed", "deaths", "recovered", "lag", "totalconfirmed", "confirmed_lag",

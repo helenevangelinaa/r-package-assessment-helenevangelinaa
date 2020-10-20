@@ -3,7 +3,7 @@
 \docType{data}
 \name{covid19total}
 \alias{covid19total}
-\title{covid19total}
+\title{covid19total dataset}
 \format{
 a dataset with
 \itemize{

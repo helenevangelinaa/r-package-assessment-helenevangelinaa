@@ -1,13 +1,13 @@
 Package: covid19shiny
-Title: What the Package Does (One Line, Title Case)
+Title: Shiny Dashboard of Coronavirus State Worldwide
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Helen",
            family = "Evangelina",
            role = c("aut", "cre"),
-           email = "heva0001@student.monash.edu",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+           email = "heva0001@student.monash.edu"))
+Description: Presenting an overview of Coronavirus state in the world in a Shinydashboard by providing functions to launch the application and simplify as well as produce the contents inside the Shinydashboard.
+License: GPL-3
 License: GPL-3
 Encoding: UTF-8
 LazyData: true

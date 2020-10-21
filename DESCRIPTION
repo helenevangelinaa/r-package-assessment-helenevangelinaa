@@ -27,7 +27,8 @@ Imports:
     here,
     dplyr,
     magrittr,
-    qpdf
+    qpdf,
+    htmlwidgets
 Depends: 
     R (>= 2.10)
 Suggests: 

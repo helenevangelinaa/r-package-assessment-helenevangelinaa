@@ -1,5 +1,3 @@
-library(ggplot2)
-
 test_that("dailyplot erros", {
  
   a <- c("input$country")

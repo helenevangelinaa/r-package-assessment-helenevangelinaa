@@ -16,7 +16,6 @@ RoxygenNote: 7.1.1
 Imports: 
     shiny,
     shinydashboard,
-    tidycovid19,
     ggplot2,
     plotly,
     leaflet,
@@ -30,7 +29,8 @@ Imports:
     qpdf,
     htmlwidgets,
     testthat,
-    tidyr
+    tidyr,
+    tidycovid19
 Depends: 
     R (>= 2.10)
 Suggests: 

@@ -5,18 +5,23 @@
 \alias{covid19wrangled}
 \title{covid19wrangled dataset}
 \format{
-a dataset with
-\itemize{
-\item \emph{add variables}
-}
+A dataset with 49410 rows and 7 columns:
+\describe{
+\item{country}{The country name}
+\item{date}{The date of observations}
+\item{confirmed}{The total number of confirmed cases of the country on the specific date}
+\item{deaths}{The total number of deaths of the country on the specific date}
+\item{recovered}{The total number of recovered cases of the country on the specific date}
+\item{region}{The region where the country is located (e.g. South Asia)}}
 }
 \source{
-tidycovid19 Github
+\code{tidycovid19} package on Github
+\url{https://github.com/joachim-gassen/tidycovid19}
 }
 \usage{
 covid19wrangled
 }
 \description{
-This data set contains
+This dataset contains the wrangled dataset taken from \code{download_merged_data} from \code{tidycovid19} package combined with the longitude and latitude taken from Google Developers
 }
 \keyword{datasets}

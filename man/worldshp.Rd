@@ -5,15 +5,15 @@
 \alias{worldshp}
 \title{worldshp}
 \format{
-An object of class \code{SpatialPolygonsDataFrame} with 246 rows and 11 columns.
+A shp file
 }
 \source{
-aaa
+thematicmapping.org \url{http://thematicmapping.org/downloads/world_borders.php}
 }
 \usage{
 worldshp
 }
 \description{
-world shape file
+This dataset contains the world shape file with longitude and latitude variables needed to produce a map
 }
 \keyword{datasets}

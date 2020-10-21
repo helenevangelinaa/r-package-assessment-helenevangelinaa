@@ -8,8 +8,8 @@
 #' 
 #' @importFrom magrittr %>%
 #' 
-#' @example 
-#'  covidtable(covid19wrangled)
+#' @examples 
+#'  \dontrun{covidtable(covid19total)}
 #' 
 #' @export
 covidtable <- function(data){

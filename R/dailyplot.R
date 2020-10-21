@@ -10,8 +10,9 @@
 #' 
 #' @importFrom magrittr %>%
 #' 
-#' @example 
-#'  dailyplot(input$country, "confirmed cases", "daily_confirmed")
+#' @examples 
+#' \dontrun{
+#'  dailyplot("input$country", "confirmed cases", "daily_confirmed")}
 #' 
 #' @export
 dailyplot <- function(input_function, input_name, variable_name){

@@ -17,3 +17,7 @@ SelectInput with the specified id and choices
 \description{
 This function creates selectInput for the Shiny app based on the input
 }
+\examples{
+\dontrun{selectInput01("region", covid19total$region)}
+ 
+}

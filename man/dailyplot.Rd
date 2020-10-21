@@ -19,3 +19,8 @@ A daily COVID-19 plot of daily cases, deaths or recovered based on the input
 \description{
 This function creates daily COVID-19 plot based on the input
 }
+\examples{
+\dontrun{
+ dailyplot("input$country", "confirmed cases", "daily_confirmed")}
+
+}

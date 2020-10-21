@@ -15,3 +15,7 @@ A table presenting data based on specified dataset
 \description{
 This function creates a table by using the \code{DT} package
 }
+\examples{
+ \dontrun{covidtable(covid19total)}
+
+}

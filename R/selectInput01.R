@@ -7,8 +7,8 @@
 #' @param id The id of the selectInput, referring to the variable wanting to be included in the selectInput
 #' @param choices The column with values wished to be presented on the selectInput
 #' 
-#' @example 
-#' selectInput01("region", covid19total$region)
+#' @examples 
+#' \dontrun{selectInput01("region", covid19total$region)}
 #'  
 #' @export 
 selectInput01 <- function(id, choices) {

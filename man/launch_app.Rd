@@ -12,3 +12,8 @@ Shinydashboard illustrating the state of COVID-19 cases around the world, with u
 \description{
 This function will runs the COVID-19 Shinydashboard which presents shinydashboard of the state of COVID-19 in the world
 }
+\examples{
+\dontrun{ 
+launch_app()}
+    
+}

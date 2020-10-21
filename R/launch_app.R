@@ -5,8 +5,9 @@
 #' @return Shinydashboard illustrating the state of COVID-19 cases around the world, with user interactions provided  
 #'  
 #'
-#' @example 
-#' launch_app()
+#' @examples
+#' \dontrun{ 
+#' launch_app()}
 #'     
 #' @export
 launch_app <- function(){

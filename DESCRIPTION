@@ -35,4 +35,6 @@ Depends:
 Suggests: 
     knitr,
     rmarkdown
+Remotes:
+    github::joachim-gassen/tidycovid19
 VignetteBuilder: knitr

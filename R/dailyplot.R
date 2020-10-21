@@ -37,7 +37,7 @@ dailyplot <- function(input_function, input_name, variable_name){
     ggplot2::geom_smooth(color = "red", size = 1) +
     ggplot2::labs(x = "Date",
          y = (paste0("Daily number of ", input_name)),
-         title = (paste0("Figure 3: Trend of Daily Number of ", input_name))) +
+         title = (paste0("Figure: Trend of Daily Number of ", input_name))) +
     ggplot2::theme(panel.background = element_rect(fill = "grey16"),
           plot.background = element_rect(fill = "grey16"),
           panel.grid.major = element_blank(),
@@ -73,7 +73,7 @@ dailyplot <- function(input_function, input_name, variable_name){
       ggplot2::geom_smooth(color = "red", size = 1) +
       ggplot2::labs(x = "Date",
            y = (paste0("Daily number of ", input_name)),
-           title = (paste0("Figure 3: Trend of Daily Number of ", input_name))) +
+           title = (paste0("Figure: Trend of Daily Number of ", input_name))) +
       ggplot2::theme(panel.background = element_rect(fill = "grey16"),
             plot.background = element_rect(fill = "grey16"),
             panel.grid.major = element_blank(),

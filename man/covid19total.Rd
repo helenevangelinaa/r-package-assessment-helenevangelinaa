@@ -20,11 +20,12 @@ a dataset with 183 rows and 9 variables
 \source{
 \code{tidycovid19} package on Github alongside with \code{countries.csv} taken from Google Developers
 \url{https://github.com/joachim-gassen/tidycovid19}
+\url{https://developers.google.com/public-data/docs/canonical/countries_csv}
 }
 \usage{
 covid19total
 }
 \description{
-This data set contains the total cases, deaths, recovered by country of COVID-19
+This data set contains the total cases, deaths, recovered of COVID-19 by country alongside with some other informations
 }
 \keyword{datasets}

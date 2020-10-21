@@ -4,12 +4,12 @@
 \name{covid19shiny-package}
 \alias{covid19shiny}
 \alias{covid19shiny-package}
-\title{covid19shiny: What the Package Does (One Line, Title Case)}
+\title{covid19shiny: Shiny Dashboard of Coronavirus State Worldwide}
 \description{
-What the package does (one paragraph).
+Presenting an overview of Coronavirus state in the world in a Shinydashboard by providing functions to launch the application and simplify as well as produce the contents inside the Shinydashboard.
 }
 \author{
-\strong{Maintainer}: Helen Evangelina \email{heva0001@student.monash.edu} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
+\strong{Maintainer}: Helen Evangelina \email{heva0001@student.monash.edu}
 
 }
 \keyword{internal}

@@ -133,6 +133,6 @@ covidtable(covid19total)
 
 ```{r covidtable, echo=FALSE, fig.align='center'}
 # adding the figure from COVID-19 Dashboard
-knitr::include_graphics("images/covidtable.png")
+knitr::include_graphics("man/figures/covidtable.png")
 ```
 

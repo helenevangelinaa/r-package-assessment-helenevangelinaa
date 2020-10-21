@@ -1,6 +1,6 @@
 #' covid19total dataset
 #'
-#' This data set contains the total cases, deaths, recovered by country of COVID-19
+#' This data set contains the total cases, deaths, recovered of COVID-19 by country alongside with some other informations
 #' 
 #' @format a dataset with 183 rows and 9 variables
 #' \describe{
@@ -16,4 +16,5 @@
 #' 
 #' @source `tidycovid19` package on Github alongside with `countries.csv` taken from Google Developers
 #' <https://github.com/joachim-gassen/tidycovid19>
+#' <https://developers.google.com/public-data/docs/canonical/countries_csv>
 "covid19total"

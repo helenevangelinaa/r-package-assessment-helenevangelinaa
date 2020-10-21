@@ -801,4 +801,4 @@ below:
 covidtable(covid19total)
 ```
 
-<img src="images/covidtable.png" width="100%" style="display: block; margin: auto;" />
+<img src="man/figures/covidtable.png" width="100%" style="display: block; margin: auto;" />

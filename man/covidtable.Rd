@@ -7,10 +7,10 @@
 covidtable(data)
 }
 \arguments{
-\item{data}{the dataset wanting to be put into the datatable}
+\item{data}{the dataset wanted to be put into the table}
 }
 \value{
-A daily COVID-19 plot of daily cases, deaths or recovered based on the input
+A table presenting data based on specified dataset
 }
 \description{
 This function creates a table by using the \code{DT} package

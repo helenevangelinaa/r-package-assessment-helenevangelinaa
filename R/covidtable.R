@@ -2,9 +2,9 @@
 #' 
 #' @description This function creates a table by using the `DT` package
 #'
-#' @param data the dataset wanting to be put into the datatable
+#' @param data the dataset wanted to be put into the table
 #' 
-#' @return A daily COVID-19 plot of daily cases, deaths or recovered based on the input
+#' @return A table presenting data based on specified dataset
 #' 
 #' @importFrom magrittr %>%
 #' 

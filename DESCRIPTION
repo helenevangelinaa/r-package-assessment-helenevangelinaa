@@ -5,9 +5,8 @@ Authors@R:
     person(given = "Helen",
            family = "Evangelina",
            role = c("aut", "cre"),
-           email = "heva0001@student.monash.edu"))
+           email = "heva0001@student.monash.edu")
 Description: Presenting an overview of Coronavirus state in the world in a Shinydashboard by providing functions to launch the application and simplify as well as produce the contents inside the Shinydashboard.
-License: GPL-3
 License: GPL-3
 Encoding: UTF-8
 LazyData: true

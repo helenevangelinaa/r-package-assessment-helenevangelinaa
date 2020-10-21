@@ -1,5 +1,5 @@
 ---
-title: "COVID-19 Overview Shinydashboard"
+title: "Overview of Coronavirus with Shinydashboard"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{COVID-19 Overview Shinydashboard}
@@ -18,11 +18,9 @@ knitr::opts_chunk$set(
 library(covid19shiny)
 ```
 
-This vignette is intended for the usage of `covid19shiny` package. It explains how to run the shiny application which illustrates the overview of COVID-19 state in the world and describes the functions contained inside the package. 
+This vignette is intended for the usage of `covid19shiny` package. It explains how to run the shiny application which illustrates the overview of Coronavirus state in the world and describes the functions contained inside the package, as well as guidelines for its use.  
 
-The package uses data sourced from `tidycovid19` package by Joachim Gassen by using the `download_merged_data` function. Alongside with that, `countries.csv` file taken from Google Developers and Shapefile taken from thematicmapping.org are used. 
-
-Functions inside the package include:
+The package uses data sourced from [tidycovid19](https://github.com/joachim-gassen/tidycovid19) package created by Joachim Gassen by using the `download_merged_data` function, alongside with `countries.csv` file taken from Google Developers and Shapefile taken from thematicmapping.org. It is built by using the `shiny` and `shinydashboard` package to provide users with an interactive dashboard, exploring the state of the Coronavirus pandemic in the world. The purpose of the shinydashboard is to provide useful insights regarding the state of Coronavirus worldwide and explore deeper into it.
 
 ## Installing the package
 Before using the package, it must firstly be installed from [GitHub](https://github.com/etc5523-2020/r-package-assessment-helenevangelinaa).
@@ -39,4 +37,68 @@ After loading `library(covid19shiny)`, the shiny application could be launched b
 launch_app()
 ```
 
-## Example
+## Datasets inside the package
+There are some datasets inside the package that can be used. Firstly, **covid19wrangled** is the wrangled version of the data taken from `download_merged_data` from [tidycovid19](https://github.com/joachim-gassen/tidycovid19) package. Variables included in the dataset and more detailed information could be viewed by ?covid19shiny::covid19wrangled. 
+
+To call the dataset, just run: covid19wrangled. Here is an example of how to use the dataset:
+```{r covid19wrangled}
+library(covid19shiny)
+covid19wrangled
+```
+
+The second dataset, **covid19total** presents the summary of COVID-19 cases per country, showing total confirmed cases, total deaths and total recovered cases of a country alongside with other information, which is obtained from the `covid19qrangled` previously explained combined with the `countries.csv` dataset taken from [Google Developers](https://developers.google.com/public-data/docs/canonical/countries_csv). More information: ?covid19shiny::covid19total.
+```{r covid19total}
+covid19total
+```
+
+**worldshp** is a world shape file needed to create a map.
+```{r worldshp}
+worldshp
+```
+
+## Functions
+Alongside with datasets, the package also contains functions which are created to minimise duplication in the code and make it easy for users to create the contents.
+- **selectInput01** function produces the selectInput from `shiny` based on the inputs provided. The format is `selectInput01(id, choices` in where id refers to the id name of the selectInput and choices refers to the values of a dataset's column wanted to be put into the selectInput.
+```{r selectinput, eval = FALSE}
+updateSelectInput(session, "country", selected = country)
+```
+
+- **dailyplot** would create a line graph illustrating either the daily confirmed cases, daily death, or daily recovered according to the inputs specified. The format is `dailyplot(input_function, input_name, variable_name)` in where input_function refers to the input resulted from the selectInput (e.g. input$country). The input `variable_name` would change the y-axis of the line graph to represent the variable specified. `variable_name` in this case could be `daily_confirmed`, `daily_death` or `daily_recovered`. 
+```{r dailyplot, eval = FALSE}
+dailyplot(input$country, "death", "daily_death")
+```
+
+- **covidtable** would produce a table by using the `DT` package based on the specified dataset. Fomat is `covidtable(data)`.
+```{r covidtable, eval = FALSE}
+covidtable(covid19total)
+```
+
+- Finally, **launch_app** would run the shiny application showing the overview of COVID-19 in the world which allows users to interact and explore the state of the Coronavirus pandemic.   
+```{r launch_app, eval = FALSE}
+launch_app()
+```
+
+## How to use the app?
+The application is a shinydashboard providing visualisations of the state of COVID-19 which allows users to explore the data and gain meaningful insights. User-interactions are provided so that the visualisations can be updated based on inputs. There are two tabs:
+1. **Map and Table** contains a map and summary table
+2. **Figures** contains the plots
+
+### First tab
+* The choropleth map combined with proportional symbol map illustrates the number of confirmed cases around the world.
+* The summary table shows the total confirmed cases, total death and total recovered for each country.
+
+These two visualisations can be updated by using the drop-down menu and slider input.
+
+### Second tab
+* Figure 1 shows a time-series plot of overall trend of confirmed cases by country, coloured by region.
+* Figures on the second row illustrates the line graphs of daily confirmed cases, daily deaths, and daily recovered and the summary of overall COVID-19 trend. 
+
+Drop-down menus, clickable buttons, as well as clickable map are provided in the second tab to allow user-interactions. 
+
+More detailed on how to use the app can be found on the **Instructions** tab of the dashboard.
+
+
+
+
+
+

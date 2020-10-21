@@ -1,5 +1,5 @@
 ---
-title: "Overview of Coronavirus with Shinydashboard"
+title: "COVID-19 Overview Shinydashboard"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{COVID-19 Overview Shinydashboard}
@@ -43,17 +43,17 @@ There are some datasets inside the package that can be used. Firstly, **covid19w
 To call the dataset, just run: covid19wrangled. Here is an example of how to use the dataset:
 ```{r covid19wrangled}
 library(covid19shiny)
-covid19wrangled
+head(covid19wrangled)
 ```
 
 The second dataset, **covid19total** presents the summary of COVID-19 cases per country, showing total confirmed cases, total deaths and total recovered cases of a country alongside with other information, which is obtained from the `covid19qrangled` previously explained combined with the `countries.csv` dataset taken from [Google Developers](https://developers.google.com/public-data/docs/canonical/countries_csv). More information: ?covid19shiny::covid19total.
 ```{r covid19total}
-covid19total
+head(covid19total)
 ```
 
 **worldshp** is a world shape file needed to create a map.
 ```{r worldshp}
-worldshp
+head(worldshp)
 ```
 
 ## Functions

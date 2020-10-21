@@ -10,5 +10,10 @@
 #'     
 #' @export
 launch_app <- function(){
-  shiny::runApp("inst/app/app.R")
+  directory <- system.file("app", package = "covid19shiny")
+  if (directory == "") {
+    stop("Could not find directory. Try re-installing `covid19shiny`.", call. = FALSE)
+  }
+  
+  shiny::runApp(directory, display.mode = "normal")
 }

@@ -43,6 +43,7 @@ jobs:
       - name: Query dependencies
         run: |
           install.packages('remotes')
+          remotes::install_github("github::nset-ornl/wbstats")
           remotes::install_github("joachim-gassen/tidycovid19")
           saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
           writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")

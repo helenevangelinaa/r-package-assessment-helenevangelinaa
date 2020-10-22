@@ -26,6 +26,6 @@ a dataset with 183 rows and 9 variables
 covid19total
 }
 \description{
-This data set contains the total cases, deaths, recovered of COVID-19 by country alongside with some other informations
+This data set contains the total cases, deaths, recovered of COVID-19 by country alongside with some other information, wby combiining \code{covid19wrangled} with dataset from Google Developers
 }
 \keyword{datasets}

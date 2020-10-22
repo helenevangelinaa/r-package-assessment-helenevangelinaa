@@ -22,6 +22,6 @@ A dataset with 49410 rows and 7 columns:
 covid19wrangled
 }
 \description{
-This dataset contains the wrangled dataset taken from \code{download_merged_data} from \code{tidycovid19} package combined with the longitude and latitude taken from Google Developers
+This dataset contains the wrangled dataset taken from \code{download_merged_data} from \code{tidycovid19} package
 }
 \keyword{datasets}

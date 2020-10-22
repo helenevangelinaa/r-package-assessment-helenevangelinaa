@@ -29,7 +29,8 @@ Imports:
     htmlwidgets,
     testthat,
     tidyr,
-    tidycovid19
+    tidycovid19,
+    wbstats
 Depends: 
     R (>= 3.5.0)
 Suggests: 

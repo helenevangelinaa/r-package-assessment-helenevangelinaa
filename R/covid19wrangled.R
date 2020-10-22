@@ -1,6 +1,6 @@
 #' covid19wrangled dataset
 #'
-#' This dataset contains the wrangled dataset taken from `download_merged_data` from `tidycovid19` package combined with the longitude and latitude taken from Google Developers
+#' This dataset contains the wrangled dataset taken from `download_merged_data` from `tidycovid19` package
 #' 
 #' @format A dataset with 49410 rows and 7 columns: 
 #' \describe{
